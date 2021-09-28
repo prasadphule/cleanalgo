@@ -1,27 +1,352 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <h1>Comming soon!</h1>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>cleanalgo: A technology consultancy | cleanalgo</title>
+</head>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+<body>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="relative bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
+          fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="50,0 100,0 50,100 0,100" />
+        </svg>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    -->
-  </body>
+        <div>
+          <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+              <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+                <div class="flex items-center justify-between w-full md:w-auto">
+                  <a href="#">
+                    <span class="sr-only">cleanalgo</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="166" height="49" viewBox="0 0 166 49">
+                      <text id="CleanAlgo" font-size="35" font-family="SegoeUI, Segoe UI">
+                        <tspan x="0" y="38">Clean</tspan><tspan y="38" font-family="SegoeUI-Bold, Segoe UI" font-weight="700">Algo</tspan>
+                      </text>
+                    </svg>
+                  </a>
+                  <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button"
+                      class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                      aria-expanded="false">
+                      <span class="sr-only">Open main menu</span>
+                      <!-- Heroicon name: outline/menu -->
+                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Clients</a>
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Services</a>
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Careers</a>
+                <a href="#" class="font-medium text-gray-500 hover:text-gray-900">Contact</a>
+              </div>
+            </nav>
+          </div>
+
+          <!--
+          Mobile menu, show/hide based on menu open state.
+
+          Entering: "duration-150 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+          <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              <div class="px-5 pt-4 flex items-center justify-between">
+                <div>
+                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                </div>
+                <div class="-mr-2">
+                  <button type="button"
+                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <span class="sr-only">Close main menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="#"
+                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+
+                <a href="#"
+                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+
+                <a href="#"
+                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+                <a href="#"
+                  class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+              </div>
+              <a href="#"
+                class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+                Log in
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          <div class="sm:text-center lg:text-left">
+            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <span class="block xl:inline">We build</span>
+              <span class="block text-indigo-600 xl:block">web applications</span>
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              We are technology consultancy that integrates strategy and technology to thrive as modern digital
+              businesses.
+            </p>
+            <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              <!-- <div class="rounded-md shadow">
+                <a href="#"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  Contact Us 
+                  <i class="ml-2 ri-arrow-right-line"></i>
+                </a>
+              </div> -->
+              <div class="mt-3 sm:mt-0">
+                <a href="#"
+                  class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                  Contact Us
+                  <i class="ml-2 ri-arrow-right-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"
+        alt="">
+    </div>
+  </div>
+
+  <!-- Logo Cloud -->
+  <!-- <div class="bg-gray-100">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+        Trusted by big names in IT Industry
+      </p>
+      <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        </div>
+        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          <img class="h-12" src="https://www.orxagrid.com/images/logo-03-02-2-250x72.png" alt="" title=""
+            style="height: 2.5rem;">
+        </div>
+        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+          <img class="h-12" src="https://www.eatferry.com/img/logo-color.png" alt="" title="" style="height: 4.5rem;">
+        </div>
+        <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+          <img class="h-12" src="https://api.viralowl.in/images/logo.png" alt="" title="">
+        </div>
+        <div class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<!-- <div class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+        Services we offer
+      </p>
+      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+        We are Expert .Net and React consultancy
+      </p>
+    </div>
+
+    <div class="mt-10">
+      <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+        <div class="relative">
+          <dt>
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md text-white">
+              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" height="20">
+            </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">React.js ecosystem</p>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">
+            React.js a JavaScript library for building user interfaces, create components for web applications.
+          </dd>
+          <ul class="divide-y divide-gray-200">
+            <li class="py-4 flex md:py-0 md:pb-4">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Vitae in pulvinar odio id utobortis in inter.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Sed sed id viverra viverra augue eget massa.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Urna, gravida amet, a, integer venenatis.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Lobortis sed pharetra amet vitae eleifend.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Ullamcorper blandit a consequat donec elit aoreet.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/.NET_Logo.svg/1200px-.NET_Logo.svg.png">
+            </div>
+            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">.Net ecosystem</p>
+          </dt>
+          <dd class="mt-2 ml-16 text-base text-gray-500">
+            Free. Cross-platform. Open source. A developer platform for building all your apps.
+          </dd>
+          <ul class="divide-y divide-gray-200">
+            <li class="py-4 flex md:py-0 md:pb-4">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Vitae in pulvinar odio id utobortis in inter.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Sed sed id viverra viverra augue eget massa.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Urna, gravida amet, a, integer venenatis.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Lobortis sed pharetra amet vitae eleifend.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-500">Ullamcorper blandit a consequat donec elit aoreet.</span>
+            </li>
+          </ul>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div> -->
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-indigo-50">
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+      <span class="block">Ready to build you web applications?</span>
+      <span class="block text-indigo-600">Contact Us.</span>
+    </h2>
+    <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+      <div class="inline-flex rounded-md shadow">
+        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Simple footer -->
+<footer class="max-w-7xl mx-auto py-16 px-4 overflow-hidden sm:px-6 lg:px-8">
+  <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
+    <div class="py-2 px-5">
+      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+        Clients
+      </a>
+    </div>
+
+    <div class="py-2 px-5">
+      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+        Services
+      </a>
+    </div>
+
+    <div class="py-2 px-5">
+      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+        Careers
+      </a>
+    </div>
+
+    <div class="py-2 px-5">
+      <a href="#" class="text-base text-gray-500 hover:text-gray-900">
+        Contact
+      </a>
+    </div>
+  </nav>
+  <div class="mt-8 flex justify-center space-x-6">
+
+    <a href="#" class="text-gray-400 hover:text-gray-500">
+      <span class="sr-only">GitHub</span>
+      <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+      </svg>
+    </a>
+
+    <a href="#" class="text-gray-400 hover:text-gray-500">
+      <span class="sr-only">Linkedin</span>
+      <img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2012/240/iconmonstr-linkedin-2.png" alt="Linkedin 2" style="width: 25px;" width="240" height="240">
+    </a>
+  </div>
+  <p class="mt-8 text-center text-base text-gray-500">
+    &copy; 2021 Workflow, Inc. All rights reserved.
+  </p>
+</footer>
+
+
+</body>
+
 </html>
