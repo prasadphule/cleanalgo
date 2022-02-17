@@ -1,0 +1,63 @@
+.landing-div {
+    margin: 70px 0px 0 0px;
+}
+.landing-heaing{
+    font-size: 40px;
+}
+
+.button-1 {
+   height: 67px; 
+   width: 178px;
+   color: white;
+   background-color: black;
+   border-radius: 30px;
+   margin: 35px 20px 0 0;
+}
+
+.button-2 {
+    height: 67px; 
+    width: 178px;
+    color: black;
+    background-color: white;
+    border-color: gray;
+    border-radius: 30px;
+    margin: 35px 0 0 0;
+ }
+
+ .learn-more {
+     margin-top:85px ;
+     padding: 5px;
+ }
+
+ .image {
+     width: 585px;
+     height: 390px;
+ }
+
+ .sub-heading {
+    margin: 230px 0px 0 0px;
+ }
+
+.web-dev {
+    margin: 60px 0px 0 0px;
+    background-color: #F7F7F7;
+    padding: 50px;
+}
+
+.react {
+    width: 400;
+    height: 200px;
+    background-color: #F7F7F7;
+    padding: 50px;
+}
+
+.dot-net {
+    width: 400;
+    height: 200px;
+    background-color: #F7F7F7;
+    padding: 50px;
+}
+
+.blogs {
+    margin: 60px 0px 70px 0px;
+}
